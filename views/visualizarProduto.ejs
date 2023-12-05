@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualização Produtos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/dc1a1422df.js" crossorigin="anonymous"></script>
+    <style>
+        body{
+            background-color: rgb(32, 31, 31);
+        }
+
+        h1{
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        .container-flex{
+            display: flex;
+            justify-content: space-evenly ;
+            margin-top: 50px;
+            flex-wrap: wrap;
+        }
+
+        .imagens{
+            width: 100%;
+            height: 200px;
+            margin: 0 auto;
+            padding: 10px;
+        }
+
+        .card {
+            transition: transform 0.3s ease-out;
+            margin-top: 20px;
+        }
+
+        .card:hover {
+            transform: scale(1.1);
+        }
+
+        .preco{
+            font-weight: bold;
+        }
+
+        .acoes i{
+            font-size: 1.4em;
+            color: white;
+            padding: 5px;
+        }
+
+        .acoes{
+            text-align: center;
+            padding: 5px;
+            background-color: black;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Visualizando Produtos Cadastrados</h1>
+
+    <div class="container-flex">
+        <% produtos.forEach(produto => { %>
+        <div class="card" style="width: 18rem;">
+            <img src="/uploads/<%= produto.imagem_produto %>" class="imagens card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title"><%= produto.nome_produto %></h5>
+            <p class="card-text"><%= produto.descricao_produto %> | <%= produto.genero_produto %> </p>
+            <p class="preco card-text">R$ <%= produto.preco_produto %></p>
+            <div class="acoes">
+                <a href="/dashboard/gestao-cliente/visualizar-produtos/edit/<%= produto.id_produto %>">
+                    <i  style="color:green;" class="icon fa-solid fa-pen-to-square"></i>
+                </a>
+                <a href="/dashboard/gestao-cliente/visualizar-produtos/delete/<%= produto.id_produto %>">
+                    <i style="color:red;" class="icon fa-solid fa-trash"></i>
+                </a>
+            </div>
+            </div>
+        </div>
+        <% }); %>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

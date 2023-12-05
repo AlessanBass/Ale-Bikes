@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cadastro</title>
+        <script src="https://kit.fontawesome.com/dc1a1422df.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="contato.css">
+        <link rel="stylesheet" href="sobrenos.css">
+        <link rel="stylesheet" href="footer.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/dc1a1422df.js" crossorigin="anonymous"></script>
+    
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+    
+            body {
+                font-family: 'Oswald', sans-serif;
+            }
+    
+            header {
+                display: flex;
+                justify-content: space-between;
+                align-items: baseline;
+                background-color: rgb(34, 31, 31);
+                padding: 20px;
+                width: 100%;
+                position: sticky;
+                top: 0;
+                z-index: 1;
+            }
+    
+            h2 {
+                color: white;
+            }
+    
+            .nav-menu {
+                display: flex;
+                justify-content: end;
+            }
+    
+            .nav-menu a {
+                text-decoration: none;
+                color: white;
+                padding: 10px;
+                font-size: 1.2em;
+            }
+    
+            .nav-menu a:hover {
+                text-decoration: underline;
+                color: white;
+                padding: 10px;
+            }
+    
+    
+            .img-section1 {
+                width: 100%;
+            }
+    
+            .img-carroussel {
+                width: 100px;
+                height: 600px;
+    
+            }
+    
+            .h2-section2 {
+                color: white;
+                text-align: center;
+                background-color: rgb(34, 31, 31);
+                padding: 10px;
+                width: 15%;
+                margin: 20px auto 0 auto;
+                border-radius: 10px;
+    
+            }
+    
+            .section3 {
+                /*  height: 100vh; */
+                /*  border: 1px solid blue; */
+                background-color: rgb(34, 31, 31);
+                color: white;
+                margin-top: 40px;
+            }
+    
+            .container-flex {
+                display: flex;
+                justify-content: space-evenly;
+                margin-top: 50px;
+                flex-wrap: wrap;
+            }
+    
+            .imagens {
+                width: 100%;
+                height: 200px;
+                margin: 0 auto;
+                padding: 10px;
+            }
+    
+            .card {
+                transition: transform 0.3s ease-out;
+                margin-top: 20px;
+            }
+    
+            .card:hover {
+                transform: scale(1.1);
+            }
+    
+            .preco {
+                font-weight: bold;
+            }
+    
+            .acoes i {
+                font-size: 1.4em;
+                color: white;
+                padding: 5px;
+            }
+    
+            .acoes {
+                text-align: center;
+                padding: 5px;
+                background-color: black;
+                border-radius: 5px;
+            }
+    
+            .section4 {
+                padding: 10px;
+            }
+    
+            .h1-carrinho{
+                color: black;
+                padding: 10px;
+                text-align: center;
+                font-size: 2.9em;
+            }
+            .h2-carrinho{
+                color: black;
+                padding: 10px;
+                text-align: center;
+            }
+            .p-carrinho{
+                text-align: center;
+                padding: 10px;
+                margin-top: -20px;
+                color: rgb(94, 91, 91);
+                font-size: 1.2em;
+            }
+    
+            .button-carrinho{
+                text-decoration: none;
+                background-color: black;
+                padding: 30px;
+                border-radius: 10px;
+                text-align: center;
+                width: 20%;
+                margin: 30px auto 30px auto;
+            }
+    
+            
+            .button-carrinho:hover{
+                background-color: rgb(61, 60, 60);
+            }
+    
+            .sp-carrinho{
+                color: white;
+                font-size: 1.2em;
+            }
+    
+            .imagens-car{
+                padding: 10px;
+                width: 200px;
+                height: 200px;
+                margin-right: 100px;
+            }
+    
+            .flex-car{
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+                align-items: center;
+                padding: 10px;
+                border: 1px solid black;
+                background-color: rgb(187, 187, 187);
+                margin-bottom: 10px;
+                border-radius: 20px;
+                width: 80%;
+                margin: 10px auto auto auto;
+            }
+    
+            .p-car{
+                padding: 10px;
+                font-weight: bold;
+                font-size: 2em;
+                text-transform: uppercase;
+                margin-right: 15px;
+            }
+    
+            .exluir-carrinho{
+                text-decoration: none;
+                padding: 10px;
+                color: white;
+                background-color: black;
+                border-radius: 10px;
+                text-align: center;
+            }
+    
+            .form-produto{
+                width: 50%;
+                margin: 10px auto 10px auto;
+                background-color: rgb(133, 130, 130);
+                padding: 20px;
+                border-radius: 20px;
+            }
+    
+            
+        </style>
+    </head>
+    
+<body>
+    <header> 
+        <h2 class="h2-logo">ALE BIKES</h2>
+        <nav class="nav-menu">
+            <a href="/">Início</a>
+            <a href="/sobrenos">Sobre Nós</a>
+            <a href="/contato">Contato </a>
+            <a href="/carrinho">Carinho <i class="fa-solid fa-cart-shopping"></i></a>
+        </nav>
+   </header>
+
+
+   <main>
+        <h1>Cadastro Cliente</h1>
+        <form class="form-produto" action="/cadastro-cliente" method="post">
+            <!-- Campos do produto -->
+            <div class="mb-3">
+                <label for="nome_produto" class="form-label">Nome:</label>
+                <input type="text" name="nome" class="form-control" id="nome_produto" aria-describedby="emailHelp" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="nome_produto" class="form-label">Sobrenome:</label>
+                <input type="text" name="sobrenome" class="form-control" id="nome_produto" aria-describedby="emailHelp" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="nome_produto" class="form-label">CPF:</label>
+                <input type="text" name="cpf" class="form-control" id="nome_produto" aria-describedby="emailHelp" required>
+            </div>
+        
+            <div class="mb-3">
+                <label for="descricao_produto" class="form-label">Rua:</label>
+                <input type="text" name="rua" class="form-control" id="descricao_produto" aria-describedby="emailHelp" required>
+            </div>
+        
+            <div class="mb-3">
+                <label for="preco_produto" class="form-label">Bairro:</label>
+                <input type="text" name="bairro" class="form-control" id="preco_produto" aria-describedby="emailHelp" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="preco_produto" class="form-label">Cidade:</label>
+                <input type="text" name="cidade" class="form-control" id="preco_produto" aria-describedby="emailHelp" required>
+            </div>
+    
+            <button type="submit" class="btn btn-primary">Cadastrar</button>
+        </form>
+   </main>
+
+
+
+
+   <footer >
+    <div class="flex-container-footer">
+        <div class="flex-footer">
+            <h3>ALE BIKES</h3>
+            <p>Sempre à  disposição, compre já a sua bike em 12x sem juros.</p>
+        </div>
+
+        <div class="flex-footer">
+            <h3>Informações</h3>
+            <a class="link-footer" href="">Termos e Condições</a>
+            <a class="link-footer" href="">Política e Privacidade</a>
+        </div>
+
+        <div class="flex-footer">
+            <h3>Loja</h3>
+            <a class="link-footer" href="">Sobre nós</a>
+            <a class="link-footer" href="">Contato<a>
+        </div>
+
+        <div class="flex-footer">
+            <h3>Contato Rápido</h3>
+            <p>E-mail: acsantos.cic@uesc.br</p>
+            <p>Telefone: (73) 90000-0000</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <hr>
+    </div>
+
+    <h4 class="h4-footer">
+        Desenvolvido por Alessandro C. Santos
+    </h4>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

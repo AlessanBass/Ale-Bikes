@@ -1,0 +1,42 @@
+footer{
+    background-color: rgb(34, 31, 31);
+    color: white;
+    padding: 30px;
+
+}
+
+hr{
+    width: 100%;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+  }
+  
+
+.flex-footer{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 10px;
+    font-weight: 300;
+}
+
+.flex-container-footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: baseline;
+}
+
+.h4-footer{
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.link-footer{
+    color: white;
+}
+

@@ -1,0 +1,46 @@
+main{
+    padding: 10px;
+}
+
+.h2-contato{
+    color: black;
+    padding: 10px;
+    font-size: 4em;
+}
+
+.h3-contato{
+    color: black;
+}
+
+.contato{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.icon-main{
+    color: rgb(24, 151, 236);
+    padding: 10px;
+    font-size: 18em;
+    
+}
+
+.flex-dir{
+    padding: 10px;
+    align-self: center;
+}
+
+.flex-esq{
+    padding: 10px;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.text-main{
+    color: rgb(112, 110, 110);
+}
